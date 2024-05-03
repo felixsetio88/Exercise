@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Replay</title>
+</head>
+<body>
+    <div style="text-align:center">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+    </div>
+    <br>
+    <video id="video1" width="420">
+        <source src="/assets/WhatsApp Video 2024-05-03 at 2.03.24 PM.mp4" type="video/mp4">
+        <source src="/assets/ITB-STIKOM-BALI.ogg" type="audio/ogg">
+        Your browser does not support HTML video.
+    </video>
+
+    <script>
+        let myVideo = document.getElementById("video1");
+
+        function playPause(){
+            if(myVideo.paused){
+                myVideo.play();
+            } else {
+                myVideo.pause();
+            }
+        }
+
+        function makeBig(){
+            myVideo.width = 560;
+        }
+
+        function makeSmall(){
+            myVideo.width = 320;
+        }
+
+        function makeNormal(){
+            myVideo.width = 420;
+        }
+    </script>
+    <p>Video courtesy of <a href=“https://www.youtube.com/@STIKOMBalialwaysthefirst” target=“_blank”>STKOM BALI</a>.</p>
+</body>
+</html>
